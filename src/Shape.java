@@ -1,6 +1,7 @@
-public class Shape {
+public abstract class Shape {
 
     private String color = "white";
+
 
     public Shape(){
 
@@ -9,26 +10,12 @@ public class Shape {
         this.color = color;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public double area(){
-        return 0;
-    }
-    public double perimeter(){
-        return 0;
-    }
-
-
+    public abstract double perimeter();
+    public abstract double area();
     @Override
     public String toString() {
         return "Shape{" +
-                "color='" + color + '\'' +
-                '}';
+                "color = " + color + "/*" +
+                "}";
     }
 }
